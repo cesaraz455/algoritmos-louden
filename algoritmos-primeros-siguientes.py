@@ -1,19 +1,55 @@
 import pprint
 
+# $ es cadena vacia
 gramatica = [
-    [{ "simbolo": "E", "definicion": ["T", "E'"] }],
-    [{ "simbolo": "E'", "definicion": ["+", "T", "E'"] }],
-    [{ "simbolo": "E'", "definicion": ["$"] }],
-    [{ "simbolo": "T", "definicion": ["F", "T'"] }],
-    [{ "simbolo": "T'", "definicion": ["*", "F", "T'"] }],
-    [{ "simbolo": "T'", "definicion": ["$"] }],
-    [{ "simbolo": "F", "definicion": ["(", "E", ")"] }],
-    [{ "simbolo": "F", "definicion": ["id"] }],
+    [{ "simbolo": "O", "definicion": ["INT", "SN", "SV"] }],
+    [{ "simbolo": "INT", "definicion": ["interrogación"] }],
+    [{ "simbolo": "SN", "definicion": ["DET", "N", "PL"] }],
+    [{ "simbolo": "SN", "definicion": ["$"] }],
+    [{ "simbolo": "PL", "definicion": ["plural"] }],
+    [{ "simbolo": "PL", "definicion": ["$"] }],
+    [{ "simbolo": "DET", "definicion": ["que"] }],
+    [{ "simbolo": "DET", "definicion": ["una"] }],
+    [{ "simbolo": "DET", "definicion": ["el"] }],
+    [{ "simbolo": "DET", "definicion": ["su"] }],
+    [{ "simbolo": "DET", "definicion": ["un"] }],
+    [{ "simbolo": "DET", "definicion": ["la"] }],
+    [{ "simbolo": "DET", "definicion": ["$"] }],
+    [{ "simbolo": "SV", "definicion": ["AUX", "VERBAL", "CIRCUNSTANCIAL"] }],
+    [{ "simbolo": "VERBAL", "definicion": ["X", "OI"] }],
+    [{ "simbolo": "X", "definicion": ["V", "SN"] }],
+    [{ "simbolo": "X", "definicion": ["COP", "PREDNOM"] }],
+    [{ "simbolo": "COP", "definicion": ["estar"] }],
+    [{ "simbolo": "PREDNOM", "definicion": ["ADJ"] }],
+    [{ "simbolo": "ADJ", "definicion": ["encendido"] }],
+    [{ "simbolo": "CIRCUNSTANCIAL", "definicion": ["PREP", "SN", "CIRCUNSTANCIAL"] }],
+    [{ "simbolo": "CIRCUNSTANCIAL", "definicion": ["$"] }],
+    [{ "simbolo": "OI", "definicion": ["a", "SN"] }],
+    [{ "simbolo": "OI", "definicion": ["$"] }],
+    [{ "simbolo": "N", "definicion": ["yo"] }],
+    [{ "simbolo": "N", "definicion": ["usted"] }],
+    [{ "simbolo": "N", "definicion": ["tema"] }],
+    [{ "simbolo": "N", "definicion": ["conexión"] }],
+    [{ "simbolo": "N", "definicion": ["internet"] }],
+    [{ "simbolo": "N", "definicion": ["bombillo"] }],
+    [{ "simbolo": "N", "definicion": ["router"] }],
+    [{ "simbolo": "N", "definicion": ["servicio"] }],
+    [{ "simbolo": "N", "definicion": ["mantenimiento"] }],
+    [{ "simbolo": "N", "definicion": ["encuesta"] }],
+    [{ "simbolo": "N", "definicion": ["satisfacción"] }],
+    [{ "simbolo": "AUX", "definicion": ["T"] }],
+    [{ "simbolo": "T", "definicion": ["no pasado"] }],
+    [{ "simbolo": "V", "definicion": ["colaborar"] }],
+    [{ "simbolo": "V", "definicion": ["tener"] }],
+    [{ "simbolo": "V", "definicion": ["desear"] }],
+    [{ "simbolo": "V", "definicion": ["responder"] }],
+    [{ "simbolo": "PREP", "definicion": ["en"] }],
+    [{ "simbolo": "PREP", "definicion": ["de"] }],
 ]
 
-simbolo_inicial = "E"
-not_terminal = ["E","E'","T","T'","F"]
-terminal = ["id","+","*","(",")","$"]
+simbolo_inicial = "O"
+not_terminal = ["O", "INT","SN","PL","DET","SV", "VERBAL", "X", "COP", "PREDNOM", "ADJ", "CIRCUNSTANCIAL", "OI", "N", "AUX", "T", "V", "PREP"]
+terminal = ["$", "interrogación","plural","que","una","el","su","un","estar","encendido","a","yo","usted","tema","conexión","internet","bombillo","router","servicio","mantenimiento","no pasado","colaborar","tener","desear","en","de"]
 primeros = {}
 siguientes = {}
 
