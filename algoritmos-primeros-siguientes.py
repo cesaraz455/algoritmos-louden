@@ -38,7 +38,7 @@ gramatica = [
     [{ "simbolo": "N", "definicion": ["encuesta"] }],
     [{ "simbolo": "N", "definicion": ["satisfacción"] }],
     [{ "simbolo": "AUX", "definicion": ["T"] }],
-    [{ "simbolo": "T", "definicion": ["no pasado"] }],
+    [{ "simbolo": "T", "definicion": ["no_pasado"] }],
     [{ "simbolo": "V", "definicion": ["colaborar"] }],
     [{ "simbolo": "V", "definicion": ["tener"] }],
     [{ "simbolo": "V", "definicion": ["desear"] }],
@@ -48,8 +48,58 @@ gramatica = [
 ]
 
 simbolo_inicial = "O"
-not_terminal = ["O", "INT","SN","PL","DET","SV", "VERBAL", "X", "COP", "PREDNOM", "ADJ", "CIRCUNSTANCIAL", "OI", "N", "AUX", "T", "V", "PREP"]
-terminal = ["$", "interrogación","plural","que","una","el","su","un","estar","encendido","a","yo","usted","tema","conexión","internet","bombillo","router","servicio","mantenimiento","no pasado","colaborar","tener","desear","en","de"]
+not_terminal = [
+    "O", 
+    "INT",
+    "SN",
+    "PL",
+    "DET",
+    "SV", 
+    "VERBAL", 
+    "X", 
+    "COP", 
+    "PREDNOM", 
+    "ADJ", 
+    "CIRCUNSTANCIAL", 
+    "OI", 
+    "N", 
+    "AUX", 
+    "T", 
+    "V", 
+    "PREP"
+]
+terminal = [
+    "$",
+    "interrogación",
+    "plural",
+    "que",
+    "una",
+    "el",
+    "su",
+    "un",
+    "la",
+    "estar",
+    "encendido",
+    "a",
+    "yo",
+    "usted",
+    "tema",
+    "conexión",
+    "internet",
+    "bombillo",
+    "router",
+    "servicio",
+    "mantenimiento",
+    "encuesta",
+    "satisfaccion",
+    "no_pasado",
+    "colaborar",
+    "tener",
+    "desear",
+    "responder",
+    "en",
+    "de"
+]
 primeros = {}
 siguientes = {}
 
